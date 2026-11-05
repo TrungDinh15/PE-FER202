@@ -1,7 +1,7 @@
 param(
     [string]$StudentCode = "QE200047",
     [string]$FullName = "Dinh Thanh Trung",
-    [string]$GithubUrl = "https://github.com/TrungDinh15/qe200047",
+    [string]$GithubUrl = "https://github.com/TrungDinh15/PE-FER202",
     [string]$VercelUrl = "https://qe200047.vercel.app",
     [string]$SupabaseUrl = "https://rkxuzvbffrsvzfuouoec.supabase.co",
     [string]$SupabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJreHV6dmJmZnJzdnpmdW91b2VjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM3MDE5NDEsImV4cCI6MjEwOTI3Nzk0MX0.ShrPG4D0yKu1KrPJDWnW5507wqWoG5KwsZcoPzyDDiM"
