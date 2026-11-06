@@ -7,25 +7,31 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
-import { BookPlus, ListChecks, Search } from "lucide-react";
+import { BookPlus, ListChecks, Search, BookOpen, Library } from "lucide-react";
 
 export default function HomePage() {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
       <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="flex justify-center mb-6">
+          <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+            <Library className="w-10 h-10" />
+          </div>
+        </div>
         <h1
           data-testid="home-title"
-          className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4"
+          className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4 text-primary"
         >
           ShelfLife
         </h1>
-        <p className="text-lg sm:text-xl text-muted-foreground mb-8">
+        <p className="text-lg sm:text-xl text-muted-foreground mb-8 leading-relaxed">
           A small web app where each person keeps a list of the books they want to read,
           are reading or have finished, and sees how much they have on their shelf.
         </p>
         <div className="flex justify-center gap-4">
           <Link href="/books">
-            <Button size="lg" className="px-8">
+            <Button size="lg" className="px-8 gap-2">
+              <BookOpen className="w-5 h-5" />
               Open My Shelf
             </Button>
           </Link>
@@ -38,9 +44,9 @@ export default function HomePage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card className="p-6">
+        <Card className="p-6 hover:shadow-lg transition-shadow">
           <CardHeader className="p-0 mb-4">
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-3">
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-3">
               <BookPlus className="w-6 h-6" />
             </div>
             <CardTitle className="text-xl">Add books</CardTitle>
@@ -53,9 +59,9 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        <Card className="p-6">
+        <Card className="p-6 hover:shadow-lg transition-shadow">
           <CardHeader className="p-0 mb-4">
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-3">
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-3">
               <ListChecks className="w-6 h-6" />
             </div>
             <CardTitle className="text-xl">Track your progress</CardTitle>
@@ -68,9 +74,9 @@ export default function HomePage() {
           </CardContent>
         </Card>
 
-        <Card className="p-6">
+        <Card className="p-6 hover:shadow-lg transition-shadow">
           <CardHeader className="p-0 mb-4">
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-3">
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-3">
               <Search className="w-6 h-6" />
             </div>
             <CardTitle className="text-xl">Search your shelf</CardTitle>

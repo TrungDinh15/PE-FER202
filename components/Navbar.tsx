@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useBooks } from "@/context/BookContext";
 import { Button } from "@/components/ui/button";
+import { BookOpen } from "lucide-react";
 
 export default function Navbar() {
   const { user, logout, authLoading } = useBooks();
@@ -18,7 +19,8 @@ export default function Navbar() {
     <header className="border-b bg-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <div className="flex items-center space-x-6">
-          <Link href="/" className="text-xl font-bold tracking-tight">
+          <Link href="/" className="flex items-center gap-2 text-xl font-bold tracking-tight text-primary">
+            <BookOpen className="w-6 h-6" />
             ShelfLife
           </Link>
           {user && (
